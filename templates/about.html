@@ -1,0 +1,53 @@
+{% extends 'starter-page.html' %}
+{% load static %}
+{% block content %}
+  <h1>About page</h1>
+  <section id="about" class="about section">
+
+      <div class="container">
+
+        <div class="row gy-4 gx-5">
+
+          <div class="col-lg-6 position-relative align-self-start" data-aos="fade-up" data-aos-delay="200">
+            <img src="{% static 'gall/mticon.jpg' %}" class="img-fluid" alt="">
+            <a href="https://youtu.be/u3hiJwutZac" class="glightbox pulsating-play-btn"></a>
+          </div>
+
+          <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="100">
+            <h3>About Us</h3>
+            <p>
+              Mater Misericordiae Hospital was opened in 1962 by the Sisters of Mercy, a Catholic Order of Nuns originating from Ireland, three years after registering themselves as the Registered Trustees of an entity under the Perpetual Succession Act (the succeeding legislation after independence).The Hospital in accordance with the philosophy of the Sisters of Mercy aims to reach out to all members of the community irrespective of race, colour or creed, to continue the healing ministry of the church and preserve the heritage of the Sisters of Mercy. As a non-profit institution the hospital seeks to provide the most modern facilities and health care to satisfy the needs of all the community by re-investing any surplus into the continuing mission of the Sisters of Mercy.
+
+            </p>
+            <ul>
+              <li>
+                <i class="fa-solid fa-vial-circle-check"></i>
+                <div>
+                  <h5>Services</h5>
+                  <p>With a bed capacity of 176, the hospital is capable of accommodating all types of patients. The General ward bed has a bed, locker, visitors chair and common TV Room. Private rooms have wash basins and TV. En-suite rooms are self-contained and fitted with TV.</p>
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-ambulance"></i>
+                <div>
+                  <h5>Accidents and emergency</h5>
+                  <p>Accident and Emergency unit has grown in its reputation to become one of the leading Accident & Emergency units in East and Central Africa</p>
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-heart-circle-xmark"></i>
+                <div>
+                  <h5>Matter Comprehensive Care Clinic </h5>
+                  <p>Mater Comprehensive Care Clinic (MCCC) opened its doors in 2006 in response to the overwhelming burden of the HIV epidemic</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /About Section -->
+
+{% endblock %}

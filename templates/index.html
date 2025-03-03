@@ -74,6 +74,9 @@
             <li><a href="#services">Services</a></li>
             <li><a href="#departments">Departments</a></li>
             <li><a href="#doctors">Doctors</a></li>
+            <li><a href="{% url 'about' %}">About</a></li>
+            <li><a href="{% url 'service' %}">service</a></li>
+
             <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
               <ul>
                 <li><a href="#">Dropdown 1</a></li>
@@ -349,7 +352,8 @@
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-        <form action="forms/appointment.php" method="post" role="form" class="php-email-form">
+        <form action="" method="post" role="form" class="php-email-form">
+          {% csrf_token %}
           <div class="row">
             <div class="col-md-4 form-group">
               <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required="">
@@ -363,7 +367,7 @@
           </div>
           <div class="row">
             <div class="col-md-4 form-group mt-3">
-              <input type="datetime-local" name="date" class="form-control datepicker" id="date" placeholder="Appointment Date" required="">
+              <input type="date" name="date" class="form-control datepicker" id="date" placeholder="Appointment Date" required="">
             </div>
             <div class="col-md-4 form-group mt-3">
               <select name="department" id="department" class="form-select" required="">
@@ -1033,7 +1037,7 @@ Tel: 020-6903800, 0714-660862, 0734-778800</p>
             <li><a href="#">Web Development</a></li>
             <li><a href="#">Product Management</a></li>
             <li><a href="#">Marketing</a></li>
-            <li><a href="#">Graphic Design</a></li>
+            <li><a href="#">Grap~hic Design</a></li>
           </ul>
         </div>
 

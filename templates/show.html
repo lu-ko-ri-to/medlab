@@ -1,0 +1,38 @@
+{% extends 'starter-page.html' %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+{% load static %}
+{% block content %}
+	<h1 class="text-center">All Appointments</h1>
+  <div class="container">
+  <div class="d-flex gap-5 flex-wrap">
+    {% for x in all  %}
+  	<div class="card w-30">
+    <p class="text-primary">{{ x.name }}</p>
+    <p><strong>Email :{{ x.email }}</strong></p>
+    <p><strong>Phone :{{ x.phone}}</strong></p>
+    <p><strong>Department :{{ x.department }}</strong></p>
+    <p><strong>Doctor :{{ x.doctor }}</strong></p>
+    <p><strong>Message :{{ x.message }}</strong></p>
+    <p>
+      <a href="" class="text-warning">
+        <i class="bi bi-pencil">edit</i>
+      </a>
+      <br>
+    </p>
+    <p>
+      <a href="/delete/{{ x.id }}" class="text-danger">
+        <i class="bi bi-trash">Delete</i>
+      </a>
+    </p>
+
+
+
+
+    </div>
+  {% endfor %}
+
+  </div>
+  </div>
+
+
+{% endblock %}

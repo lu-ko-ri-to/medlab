@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from MedApp.models import *
 # Create your views here.
 def index(request):
@@ -66,4 +66,22 @@ def delete(request,id):
   deleteappointment = appointment.objects.get(id=id)
   deleteappointment.delete()
   return redirect('/show')
+
+
+# noinspection PyUnresolvedReferences
+def edit(request,id):
+  appoint1 = get_object_or_404(appointment,id=id)
+  if request.method == 'POST':
+    appoint1.name = request.POST.get('name')
+    appoint1.email = request.POST.get('email')
+    appoint1.phone = request.POST.get('phone')
+    appoint1.date = request.POST.get('date')
+    appoint1.department = request.POST.get('department')
+    appoint1.doctor = request.POST.get('doctor')
+    appoint1.message = request.POST.get('message')
+    appoint1.save()
+    return redirect('/show')
+  else :
+    return render(request,'edit.html',{'appoint1':appoint1})
+
 

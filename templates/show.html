@@ -13,8 +13,9 @@
     <p><strong>Department :{{ x.department }}</strong></p>
     <p><strong>Doctor :{{ x.doctor }}</strong></p>
     <p><strong>Message :{{ x.message }}</strong></p>
+      <p><strong>Date :{{ x.date }}</strong></p>
     <p>
-      <a href="" class="text-warning">
+      <a href="{% url 'edit' x.id %}" class="text-warning">
         <i class="bi bi-pencil">edit</i>
       </a>
       <br>
